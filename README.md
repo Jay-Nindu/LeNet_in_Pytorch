@@ -7,7 +7,7 @@ Currently, the complete model described by LeCun et al. has been implemented in 
 ## Results
 
 ## Discussion of LeNet's unique architecture
-![[LenetArchitecture.png]]
+![](LenetArchitecture.png)
 The above figure has been taken directly from LeCunn et al.
 
 ## Convolutions
@@ -19,7 +19,7 @@ The layers S2 and S4 are pooling layers (similar to max pooling & average poolin
 ## C3 - not fully connected
 Normally with convolutions, each cell in the output is computed using every feature map in the prior layer. This is the case for all convolutional layers in LeNet except for C3.
 C3 specifies which feature maps in S2 are to be taken to compute the feature maps for C3. See the below figure from LeCunn et al.
-![[C2_connectivity.png]]
+![](C2_connectivity.png)
 Each outup of C3 uses every combination of 3 & 4 contiguous feature maps, every combination of 4 non-contiguous feature maps, and one outputthat takes utilises all 6 feature maps. LeCunn et al. say the reasons for this connectivity are 1) to reduce the overall number of connections, and 2) to "break symmetry" of the network by forcing each feature map of C3 to extract different details. 
 
 ## F6 - fully connected
