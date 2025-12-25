@@ -27,5 +27,10 @@ Each outup of C3 uses every combination of 3 & 4 contiguous feature maps, every 
 For the second-to-last layer, all inputs from C5 are connected to all outputs in F6 (unlike the preceding convolutional layers).
 
 ## Radial basis function (RBF) layer
+The final layer has 10 RBF units (one for each digit 0-9), each with 84 inputs. For each digit, there is a 7x12 bitmaps which have been designed to represent that digit (see the bitmaps below).
+
+![]()
+
+A radial basis function computes the euclidean distance between the outputs of F6 and each bitmap - the closer the outputs are to the idealised bitmap, the smaller the output. 
 
 ## RBF loss function
